@@ -1,0 +1,774 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&family=Open+Sans&display=swap');
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html 
+{
+  scroll-behavior: smooth;
+}
+
+ :root {
+  --bg: #f6fbf9;           /* very light mint */
+  --surface: #ffffff;      /* pure white */
+
+  --text: #1f2d2a;         /* dark gray-green */
+  --text-muted: #6b7f7a;   /* muted gray-green */
+  --link: #70BAA2;
+  --strong: #2a9d8f;      /* medium teal green */
+  --heavy-strong: #1b6f63; /* deep teal green */
+
+  --border: #033814;       /* pale mint border */
+
+  --nav-bg: rgba(42, 157, 143, 0.12);      /* strong mint glass */
+  --nav-border: rgba(42, 157, 143, 0.25);  /* strong teal border */
+  --nav-shadow: rgba(42, 157, 143, 0.14);  /* teal shadow */
+
+  --card-bg: rgba(255, 255, 255, 0.7);      /* white glass */
+  --card-shadow: rgba(0, 0, 0, 0.08);
+  --svg: black;
+
+  --navbar-highlight: #87F086;
+}
+
+
+@media (prefers-color-scheme: dark) 
+{
+:root 
+{
+  --bg: #0f1f1c;           /* very dark green (almost black) */
+  --surface: #132825;      /* dark green panel */
+
+  --text: #e6f2ef;         /* soft white with green tint */
+  --text-muted: #8aa7a1;   /* muted light green-gray */
+
+  --strong: #4dd4c6;      /* bright teal accent */
+  --heavy-strong: #2bb5a5; /* stronger teal */
+  --link: #92F0D0;
+  --border: #e9f6f2;       /* dark muted border */
+
+  --nav-bg: rgba(255, 255, 255, 0.12);     /* white glass */
+  --nav-border: rgba(255, 255, 255, 0.25); /* white border */
+  --nav-shadow: rgba(0, 0, 0, 0.25);       /* dark shadow */
+
+  --card-bg: rgba(19, 40, 37, 0.7);         /* dark green glass */
+  --card-shadow: rgba(0, 0, 0, 0.4);
+
+  --svg: white;
+
+  --navbar-highlight: black;
+
+}
+}
+
+:root.light
+{
+  --bg: #f6fbf9;
+  --surface: #ffffff;
+
+  --text: #1f2d2a;
+  --text-muted: #6b7f7a;
+  --link: #70BAA2;
+  --strong: #2a9d8f;
+  --heavy-strong: #1b6f63;
+
+  --border: #033814; 
+
+  --nav-bg: rgba(42, 157, 143, 0.12);  
+  --nav-border: rgba(42, 157, 143, 0.25);
+  --nav-shadow: rgba(42, 157, 143, 0.14); 
+
+  --card-bg: rgba(255, 255, 255, 0.7);  
+  --card-shadow: rgba(0, 0, 0, 0.08);
+  --svg: black;
+
+  --navbar-highlight: #87F086;
+}
+
+:root.dark
+{
+	  --bg: #0f1f1c;     
+  --surface: #132825;  
+
+  --text: #e6f2ef;  
+  --texet-muted: #8aa7a1; 
+
+  --strong: #4dd4c6;     
+  --heavy-strong: #2bb5a5;
+  --link: #92F0D0;
+  --border: #e9f6f2;     
+
+  --nav-bg: rgba(255, 255, 255, 0.12);    
+  --nav-border: rgba(255, 255, 255, 0.25);
+  --nav-shadow: rgba(0, 0, 0, 0.25); 
+
+  --card-bg: rgba(19, 40, 37, 0.7); 
+  --card-shadow: rgba(0, 0, 0, 0.4);
+
+  --svg: white;
+
+  --navbar-highlight: black;
+}
+
+
+icon
+{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.switcher1, .switcher2
+{
+  width: 10vw;
+  height: auto;
+  color: var(--svg);
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+ .switcher1:hover, .switcher2:hover
+ {
+    transform: rotate(360deg);
+ }
+
+body
+{
+	background-color: var(--bg);
+	color: var(--text);
+  transition: all 0.3s ease;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+h1, h2 
+{
+  color: var(--heavy-strong);
+}
+
+a 
+{
+  color: var(--link);                
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.25s ease;
+}
+
+a:hover 
+{
+  color: var(--heavy-strong);       
+  border-bottom: 1px solid var(--heavy-strong);
+}
+
+  .ancher
+  {
+    position: fixed;
+    width: 200px;
+    height: auto;
+    bottom: 0;
+    right: -30px;
+  }
+
+
+ /*  ----------------------------------------------- First Section ------------------------------------------------  */
+ /*  ----------------------------------------------- First Section ------------------------------------------------  */
+ /*  ----------------------------------------------- First Section ------------------------------------------------  */
+
+#header
+{
+	font-size: 7vw;
+	width: 60%;
+	margin: auto;
+	padding-left: 10%;
+	padding-top: 8px;
+	margin-bottom: 20px;
+	border-top: 10px solid black ;
+	border-color: var(--border);
+	margin-top: 1em;
+}
+
+.selfie
+{
+	width: 100%;
+	height: auto;
+	max-width: 400px;
+	max-height: 600px;
+	border: 10px solid black;
+	border-color: var(--border);
+
+}
+
+.intro
+{
+	padding-top: 10vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    width: 80%;
+	margin: auto;
+	gap: 1.5em;
+	border-top: 10px solid black ;
+	border-color: var(--border);
+ }
+
+nav
+{
+	width: 80%;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+}
+
+
+.navbar
+ {
+ 	list-style: none;
+ 	position: relative;
+ 	display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  background: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid var(--nav-border);
+  border-radius: 16px;
+  padding: 20px;
+
+  box-shadow: 0 8px 24px var(--nav-shadow);
+ }
+
+ .navbar li
+ {
+ 	cursor: pointer;
+ 	z-index: 1;
+ 	display: inline-block;
+ 	padding: 10px 16px;
+
+ }
+
+.Professional, .Project, .Education, .Certificate, .Award, .Skills
+{
+	width: 70%;
+	margin: auto;
+	padding-top: 2vw;
+}
+
+
+ /*  ----------------------------------------------- Professional EXP --------------------------------------------  */
+ /*  ----------------------------------------------- Professional EXP --------------------------------------------  */
+ /*  ----------------------------------------------- Professional EXP --------------------------------------------  */
+
+.professionalTitle
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.ptitle
+{
+	grid-column: 1/4;
+	color: var(--heavy-strong);
+}
+
+.pdate
+{
+	grid-column: 4/-1;
+}
+
+.pcontent
+{
+	margin-left: 1em;
+	padding-top: 0.5vw;
+	padding-bottom: 0.5vw;
+}
+
+.plinkgrid
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.plink
+{
+	grid-column: 8/-1;
+	padding-bottom: 2vw;
+
+}
+
+.Professional
+{
+	display: ;
+}
+
+
+ /*  ----------------------------------------------- Project --------------------------------------------------  */
+ /*  ----------------------------------------------- Project --------------------------------------------------  */
+ /*  ----------------------------------------------- Project --------------------------------------------------  */
+
+.prlayout
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1em;
+}
+
+.prcontent
+{
+	padding-bottom: 16em;
+}
+
+.prcontent1
+{
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+}
+
+.projectp
+{
+	width: 100%;
+	height: auto;
+	max-width: 400px;
+	max-height: 600px;
+	border: 10px solid black;
+	border-color: var(--border);
+}
+
+.Project h3
+{
+	color: var(--heavy-strong);
+;
+}
+
+.Project
+{
+	display: ;
+}
+
+ /*  ----------------------------------------------- Education --------------------------------------------------  */
+ /*  ----------------------------------------------- Education --------------------------------------------------  */
+ /*  ----------------------------------------------- Education --------------------------------------------------  */
+
+.Education
+{
+		display: grid;
+  	grid-template-columns: minmax(180px, 30%) 1fr;
+}
+
+.econtent
+{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.eheader
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+
+}
+
+.elist
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-top: -8px;
+	padding-left: 20px;
+}
+
+.gpa
+{
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.ehide
+{
+	display: ;
+}
+
+.Education h3
+{
+	color: var(--heavy-strong);
+}
+
+ /*  ---------------------------------------------  Certificate -------------------------------------------------  */
+ /*  ---------------------------------------------  Certificate -------------------------------------------------  */
+ /*  ---------------------------------------------  Certificate -------------------------------------------------  */
+
+.Certificate
+{
+	margin-top: -2.5em;
+}
+
+.Certificate h2, .Certificate p
+{
+	text-align:center;
+	padding-bottom: 1vw;
+}
+
+.cimg
+{
+	display: flex;
+	justify-content: center;
+	padding-bottom: 2vw;
+}
+
+.ccimg
+{
+	border: 2px solid black;
+	border-color: var(--border);
+	width: 100%;
+	height: auto;
+}
+
+.Certificate
+{
+	display: ;
+}
+
+ /*  ---------------------------------------------  Award -----------------------------------------------------  */
+ /*  ---------------------------------------------  Award -----------------------------------------------------  */
+ /*  ---------------------------------------------  Award -----------------------------------------------------  */
+
+.Award p
+{
+	text-align: center;
+}
+
+.Award
+{
+	display: ;
+}
+
+ /*  ----------------------------------------  Skills/interest/language ---------------------------------------  */
+ /*  ----------------------------------------  Skills/interest/language ---------------------------------------  */
+ /*  ----------------------------------------  Skills/interest/language ---------------------------------------  */
+
+.Skills 
+{
+	margin-top: -30px;
+}
+
+.sgrid 
+{
+  display: grid;
+  gap: 20px;
+}
+
+.scard 
+{
+  background-color: var(--card-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: 18px;
+  padding: 20px;
+
+  box-shadow: 0 8px 20px var(--card-shadow);
+}
+
+.scard h3 
+{
+  margin-bottom: 12px;
+}
+
+.scard p 
+{
+  line-height: 1.5;
+}
+
+.Skills h3
+{
+	color: var(--heavy-strong);
+}
+
+
+ /*  -----------------------------------------------  Footer ----------------------------------------------  */
+ /*  -----------------------------------------------  Footer ----------------------------------------------  */
+ /*  -----------------------------------------------  Footer ----------------------------------------------  */
+
+footer 
+{
+	padding-top: 10vw;
+  width: 60%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 5em;
+  padding-bottom: 6vw;
+}
+
+.flink
+{
+  display: flex;
+  gap: 5em;
+  flex-wrap: nowrap;
+}
+
+.fcolumn h3 
+{
+  margin: 0 0 1.5em;
+}
+
+.fcolumn ul 
+{
+  list-style: none;
+}
+
+.fcolumn li 
+{
+  margin-bottom: 1.2em;
+}
+
+footer p, footer h3
+{
+	color: var(--heavy-strong);
+}
+
+footer p
+{
+	font-size: 1.5em;
+}
+
+
+ /*  -----------------------------------------------  Adaption ----------------------------------------------  */
+ /*  -----------------------------------------------  Adaption ----------------------------------------------  */
+ /*  -----------------------------------------------  Adaption ----------------------------------------------  */
+
+
+ /*  ----------------------------------------------- Phone Adaption ----------------------------------------------  */
+
+@media (max-width: 50em)
+{
+
+	.navbar
+ {
+    gap: 0em;
+ }
+
+ .navbar li
+ {
+ 	font-size: 14px;
+ }
+
+ 	.intro
+ 	{
+ 		padding-bottom: 10vw;	
+ 	}
+
+ 	.Professional
+	{
+	 	padding-top: 5vw;
+	}
+
+	.plink
+	{
+	padding-bottom: 5vw;
+	}
+
+	.pcontent
+	{
+	padding-top: 3vw;
+	padding-bottom: 3vw;
+	}
+
+	.prcontent
+	{
+		padding-bottom: 8em;
+	}
+
+	.Education
+	{
+		display: block;
+	}
+
+	.elist
+	{
+		grid-template-columns: 1fr;
+	}
+
+	.eiconf
+	{
+		display: flex;
+		justify-content: center;
+		padding-top: 3vw;
+		padding-bottom: 3vw;
+	}
+
+	.eheader
+	{
+		display: block;
+	}
+
+	.econtent p, .econtent h3
+	{
+		text-align: center;
+	}
+
+	.econtent li
+	{
+		margin-left: 6em;
+	}
+
+	.sgrid {
+    grid-template-columns: 1fr;
+  }
+
+  .scard 
+  {
+    padding: 16px;
+  }
+
+  .Skills 
+  {
+  		margin-top: 0px;
+  }
+
+	.Certificate
+	{
+		margin-top: 0em;
+	}
+
+  .flink
+   {
+    gap: 10em;
+    flex-wrap: nowrap;
+  }
+
+  .fleft
+  {
+  	display: none;
+
+  }
+
+    .ancher
+    {
+    	display: none;
+    }
+
+}
+
+ /*  ----------------------------------------------- Ipad Adaption ----------------------------------------------  */
+
+
+@media (min-width: 50.01em) and (max-width: 65em)
+{
+
+	nav
+{
+	padding-top: 2em;
+}
+	.navbar
+ {
+    gap: 2em;
+ }
+
+	.Education
+	{
+		display: block;
+	}
+
+		.eiconf
+	{
+		display: flex;
+		justify-content: center;
+	}
+
+	.sgrid 
+  {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .scard:first-child 
+  {
+    grid-column: 1 / -1;
+  }
+
+  footer p
+{
+	font-size: 1em;
+}
+}
+
+ /*  ----------------------------------------------- Laptop Adaption ----------------------------------------------  */
+
+
+@media (min-width: 65.01em)
+{
+
+	.intro
+	{
+		width: 60%;
+		padding-bottom: 6vw;
+	}
+
+	.navbar
+	{
+	gap: 4em;
+	}
+
+	.sgrid 
+  {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+ .navbar li
+ {
+ 	white-space: nowrap;
+ }
+
+}
+
+ /*  ----------------------------------------------- Animated  ----------------------------------------------  */
+ /*  ----------------------------------------------- Animated  ----------------------------------------------  */
+ /*  ----------------------------------------------- Animated  ----------------------------------------------  */
+
+
+.animate {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.2s ease;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+
+.fading {
+  opacity: 0;
+}
+
+.navbar li.active 
+{
+  background-color: ;
+  color: var(--svg);
+}
+
+.highlight 
+{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  height: calc(100% - 40px);
+
+  background: var(--navbar-highlight);
+  border-radius: 999px;
+  transition: all 0.3s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+
