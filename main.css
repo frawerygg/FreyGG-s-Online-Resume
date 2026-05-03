@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&family=Open+Sans&display=swap');
 
+
 @font-face {
-  font-family: 'roboto';
-  src: url('fRoboto-VariableFont_wdth,wght.woff');
+  font-family: "localfont";
+  src: url("Inter-VariableFont_opsz,wght,wght.ttf") format("truetype");
   font-weight: normal;
+  font-style: normal;
 }
 
 * 
@@ -147,8 +149,12 @@ body
 	background-color: var(--bg);
 	color: var(--text);
   transition: all 0.3s ease;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Grotesk' ,'localfont';
 }
+
+
+/* 'Space Grotesk' */
+
 
 h1, h2 
 {
@@ -554,6 +560,23 @@ footer p
 @media (max-width: 50em)
 {
 
+	.intro
+	{
+		display: block;
+	}
+
+	.intro p
+	{
+		text-align: center;
+	}
+
+	.phonep
+	{
+		display: flex;
+		justify-content: center;
+		padding-bottom: 20px;
+	}
+
 	.navbar
  {
     gap: 0em;
@@ -567,6 +590,12 @@ footer p
  	.intro
  	{
  		padding-bottom: 10vw;	
+ 	}
+
+ 	.professionalTitle
+ 	{
+ 		display: block;
+ 		padding-bottom: 10px;
  	}
 
  	.Professional
@@ -588,6 +617,16 @@ footer p
 	.prcontent
 	{
 		padding-bottom: 8em;
+	}
+
+	.prcontent1
+	{
+		display: none;
+	}
+
+	.plink
+	{
+		padding-top: 15px;
 	}
 
 	.Education
@@ -728,6 +767,21 @@ footer p
  .navbar li
  {
  	white-space: nowrap;
+ }
+
+ p
+ {
+ 	font-size: 1.25em;
+ }
+
+ li
+ {
+ 	font-size: 1.12em;
+ }
+
+ span
+ {
+ 	 	font-size: 1.12em;
  }
 
 }
