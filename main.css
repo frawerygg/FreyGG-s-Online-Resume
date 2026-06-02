@@ -275,6 +275,12 @@ nav
  /*  ----------------------------------------------- Professional EXP --------------------------------------------  */
  /*  ----------------------------------------------- Professional EXP --------------------------------------------  */
 
+.prlayout h3
+{
+	color: var(--heavy-strong);
+;
+}
+
 .professionalTitle
 {
 	display: grid;
@@ -331,7 +337,7 @@ nav
 
 .prcontent
 {
-	padding-bottom: 16em;
+	padding-bottom: 8em;
 }
 
 .prcontent1
@@ -398,6 +404,11 @@ nav
 {
 	display: flex;
 	flex-wrap: nowrap;
+}
+
+#GPA
+{
+	white-space: nowrap;
 }
 
 .ehide
@@ -698,8 +709,27 @@ footer p
     	display: none;
     }
 
+    .prlayout
+{
+	display: block;
 }
 
+.prcontent
+{
+	padding-top: 10px;
+}
+
+.prcontent
+{
+	padding-bottom: 5px;
+}
+
+.prcontent p
+{
+	text-align: center;
+}
+
+}
  /*  ----------------------------------------------- Ipad Adaption ----------------------------------------------  */
 
 
