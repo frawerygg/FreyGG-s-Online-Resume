@@ -41,6 +41,12 @@ html
   --svg: black;
 
   --navbar-highlight: #87F086;
+
+    --project-image-border: #2a9d8f;
+  --project-image-shadow: rgba(0, 0, 0, 0.28);
+
+      --section-navbar-gap: 3rem;
+
 }
 
 
@@ -70,6 +76,7 @@ html
 
   --navbar-highlight: black;
 
+
 }
 }
 
@@ -95,11 +102,14 @@ html
   --svg: black;
 
   --navbar-highlight: #87F086;
+
+    --project-image-border: #2a9d8f;
+  --project-image-shadow: rgba(0, 0, 0, 0.28);
 }
 
 :root.dark
 {
-	  --bg: #0f1f1c;     
+      --bg: #0f1f1c;     
   --surface: #132825;  
 
   --text: #e6f2ef;  
@@ -120,14 +130,15 @@ html
   --svg: white;
 
   --navbar-highlight: black;
+
 }
 
 
 icon
 {
-	display: flex;
-	justify-content: center;
-	width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .switcher1, .switcher2
@@ -146,8 +157,8 @@ icon
 
 body
 {
-	background-color: var(--bg);
-	color: var(--text);
+    background-color: var(--bg);
+    color: var(--text);
   transition: all 0.3s ease;
   font-family: 'Space Grotesk' ,'localfont';
 }
@@ -191,55 +202,55 @@ a:hover
 
 #header
 {
-	font-size: 7vw;
-	width: 60%;
-	margin: auto;
-	padding-left: 10%;
-	padding-top: 8px;
-	margin-bottom: 20px;
-	border-top: 10px solid black ;
-	border-color: var(--border);
-	margin-top: 1em;
+    font-size: 7vw;
+    width: 60%;
+    margin: auto;
+    padding-left: 10%;
+    padding-top: 8px;
+    margin-bottom: 20px;
+    border-top: 10px solid black ;
+    border-color: var(--border);
+    margin-top: 1em;
 }
 
 .selfie
 {
-	width: 100%;
-	height: auto;
-	max-width: 400px;
-	max-height: 600px;
-	border: 10px solid black;
-	border-color: var(--border);
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    max-height: 600px;
+    border: 10px solid black;
+    border-color: var(--border);
 
 }
 
 .intro
 {
-	padding-top: 10vw;
+    padding-top: 10vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: minmax(100px, auto);
     width: 80%;
-	margin: auto;
-	gap: 1.5em;
-	border-top: 10px solid black ;
-	border-color: var(--border);
+    margin: auto;
+    gap: 1.5em;
+    border-top: 10px solid black ;
+    border-color: var(--border);
  }
 
 nav
 {
-	width: 80%;
-	margin: auto;
-	display: flex;
-	justify-content: center;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
 
 .navbar
  {
- 	list-style: none;
- 	position: relative;
- 	display: flex;
+    list-style: none;
+    position: relative;
+    display: flex;
   flex-direction: row;
   align-items: center;
 
@@ -256,18 +267,18 @@ nav
 
  .navbar li
  {
- 	cursor: pointer;
- 	z-index: 1;
- 	display: inline-block;
- 	padding: 10px 16px;
+    cursor: pointer;
+    z-index: 1;
+    display: inline-block;
+    padding: 10px 16px;
 
  }
 
 .Professional, .Project, .Education, .Certificate, .Award, .Skills
 {
-	width: 70%;
-	margin: auto;
-	padding-top: 2vw;
+    width: 70%;
+    margin: auto;
+    padding-top: 2vw;
 }
 
 
@@ -277,94 +288,118 @@ nav
 
 .prlayout h3
 {
-	color: var(--heavy-strong);
+    color: var(--heavy-strong);
 ;
 }
 
 .professionalTitle
 {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .ptitle
 {
-	grid-column: 1/4;
-	color: var(--heavy-strong);
+    grid-column: 1/4;
+    color: var(--heavy-strong);
 }
 
 .pdate
 {
-	grid-column: 4/-1;
+    grid-column: 4/-1;
 }
 
 .pcontent
 {
-	margin-left: 1em;
-	padding-top: 0.5vw;
-	padding-bottom: 0.5vw;
+    margin-left: 1em;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
 }
 
 .plinkgrid
 {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .plink
 {
-	grid-column: 8/-1;
-	padding-bottom: 2vw;
+    grid-column: 8/-1;
+    padding-bottom: 2vw;
 
 }
 
 .Professional
 {
-	display: ;
+    display: ;
 }
 
 
  /*  ----------------------------------------------- Project --------------------------------------------------  */
  /*  ----------------------------------------------- Project --------------------------------------------------  */
  /*  ----------------------------------------------- Project --------------------------------------------------  */
+
+.Project {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.Project .prlayout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 3rem;
+}
 
 .prlayout
 {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 1em;
+    padding-top: 2vw;
 }
 
-.prcontent
-{
-	padding-bottom: 8em;
+.Project .projectp {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    border: 6px solid var(--project-image-border);
+    border-radius: 10px;
+
+    box-shadow: 0 10px 28px var(--project-image-shadow);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-.prcontent1
-{
-	padding-top: 1vw;
-	padding-bottom: 1vw;
+.Project .projectp:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px var(--project-image-shadow);
 }
 
-.projectp
-{
-	width: 100%;
-	height: auto;
-	max-width: 400px;
-	max-height: 600px;
-	border: 10px solid black;
-	border-color: var(--border);
+.Project .prcontent {
+    padding-bottom: 0;
 }
 
-.Project h3
-{
-	color: var(--heavy-strong);
-;
+.Project .prcontent h3 {
+    color: var(--heavy-strong);
 }
 
-.Project
-{
-	display: ;
+.Project .prcontent1 {
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    line-height: 1.55;
+}
+
+.Project .plinkgrid {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* GitHub or download link */
+.Project .plink {
+    margin: 0;
+    padding: 0;
 }
 
  /*  ----------------------------------------------- Education --------------------------------------------------  */
@@ -373,52 +408,52 @@ nav
 
 .Education
 {
-		display: grid;
-  	grid-template-columns: minmax(180px, 30%) 1fr;
+        display: grid;
+    grid-template-columns: minmax(180px, 30%) 1fr;
 }
 
 .econtent
 {
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .eheader
 {
-	display: flex;
-	justify-content: space-between;
-	align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 
 }
 
 .elist
 {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	margin-top: -8px;
-	padding-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: -8px;
+    padding-left: 20px;
 }
 
 .gpa
 {
-	display: flex;
-	flex-wrap: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 #GPA
 {
-	white-space: nowrap;
+    white-space: nowrap;
 }
 
 .ehide
 {
-	display: ;
+    display: ;
 }
 
 .Education h3
 {
-	color: var(--heavy-strong);
+    color: var(--heavy-strong);
 }
 
  /*  ---------------------------------------------  Certificate -------------------------------------------------  */
@@ -427,33 +462,33 @@ nav
 
 .Certificate
 {
-	margin-top: -2.5em;
+    margin-top: -2.5em;
 }
 
 .Certificate h2, .Certificate p
 {
-	text-align:center;
-	padding-bottom: 1vw;
+    text-align:center;
+    padding-bottom: 1vw;
 }
 
 .cimg
 {
-	display: flex;
-	justify-content: center;
-	padding-bottom: 2vw;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2vw;
 }
 
 .ccimg
 {
-	border: 2px solid black;
-	border-color: var(--border);
-	width: 100%;
-	height: auto;
+    border: 2px solid black;
+    border-color: var(--border);
+    width: 100%;
+    height: auto;
 }
 
 .Certificate
 {
-	display: ;
+    display: ;
 }
 
  /*  ---------------------------------------------  Award -----------------------------------------------------  */
@@ -462,12 +497,12 @@ nav
 
 .Award p
 {
-	text-align: center;
+    text-align: center;
 }
 
 .Award
 {
-	display: ;
+    display: ;
 }
 
  /*  ----------------------------------------  Skills/interest/language ---------------------------------------  */
@@ -476,7 +511,7 @@ nav
 
 .Skills 
 {
-	margin-top: -30px;
+    margin-top: -30px;
 }
 
 .sgrid 
@@ -509,7 +544,7 @@ nav
 
 .Skills h3
 {
-	color: var(--heavy-strong);
+    color: var(--heavy-strong);
 }
 
 
@@ -519,7 +554,7 @@ nav
 
 footer 
 {
-	padding-top: 10vw;
+    padding-top: 10vw;
   width: 60%;
   margin: auto;
   display: grid;
@@ -552,12 +587,12 @@ footer
 
 footer p, footer h3
 {
-	color: var(--heavy-strong);
+    color: var(--heavy-strong);
 }
 
 footer p
 {
-	font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 
@@ -571,109 +606,109 @@ footer p
 @media (max-width: 50em)
 {
 
-	.intro
-	{
-		display: block;
-	}
+    .intro
+    {
+        display: block;
+    }
 
-	.intro p
-	{
-		text-align: center;
-	}
+    .intro p
+    {
+        text-align: center;
+    }
 
-	.phonep
-	{
-		display: flex;
-		justify-content: center;
-		padding-bottom: 20px;
-	}
+    .phonep
+    {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
 
-	.navbar
+    .navbar
  {
     gap: 0em;
  }
 
  .navbar li
  {
- 	font-size: 14px;
+    font-size: 14px;
  }
 
- 	.intro
- 	{
- 		padding-bottom: 10vw;	
- 	}
+    .intro
+    {
+        padding-bottom: 10vw;   
+    }
 
- 	.professionalTitle
- 	{
- 		display: block;
- 		padding-bottom: 10px;
- 	}
+    .professionalTitle
+    {
+        display: block;
+        padding-bottom: 10px;
+    }
 
- 	.Professional
-	{
-	 	padding-top: 5vw;
-	}
+    .Professional
+    {
+        padding-top: 5vw;
+    }
 
-	.plink
-	{
-	padding-bottom: 5vw;
-	}
+    .plink
+    {
+    padding-bottom: 5vw;
+    }
 
-	.pcontent
-	{
-	padding-top: 3vw;
-	padding-bottom: 3vw;
-	}
+    .pcontent
+    {
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    }
 
-	.prcontent
-	{
-		padding-bottom: 8em;
-	}
+    .prcontent
+    {
+        padding-bottom: 8em;
+    }
 
-	.prcontent1
-	{
-		display: none;
-	}
+    .prcontent1
+    {
+        display: none;
+    }
 
-	.plink
-	{
-		padding-top: 15px;
-	}
+    .plink
+    {
+        padding-top: 15px;
+    }
 
-	.Education
-	{
-		display: block;
-	}
+    .Education
+    {
+        display: block;
+    }
 
-	.elist
-	{
-		grid-template-columns: 1fr;
-	}
+    .elist
+    {
+        grid-template-columns: 1fr;
+    }
 
-	.eiconf
-	{
-		display: flex;
-		justify-content: center;
-		padding-top: 3vw;
-		padding-bottom: 3vw;
-	}
+    .eiconf
+    {
+        display: flex;
+        justify-content: center;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+    }
 
-	.eheader
-	{
-		display: block;
-	}
+    .eheader
+    {
+        display: block;
+    }
 
-	.econtent p, .econtent h3
-	{
-		text-align: center;
-	}
+    .econtent p, .econtent h3
+    {
+        text-align: center;
+    }
 
-	.econtent li
-	{
-		margin-left: 6em;
-	}
+    .econtent li
+    {
+        margin-left: 6em;
+    }
 
-	.sgrid {
+    .sgrid {
     grid-template-columns: 1fr;
   }
 
@@ -684,13 +719,13 @@ footer p
 
   .Skills 
   {
-  		margin-top: 0px;
+        margin-top: 0px;
   }
 
-	.Certificate
-	{
-		margin-top: 0em;
-	}
+    .Certificate
+    {
+        margin-top: 0em;
+    }
 
   .flink
    {
@@ -700,33 +735,33 @@ footer p
 
   .fleft
   {
-  	display: none;
+    display: none;
 
   }
 
     .ancher
     {
-    	display: none;
+        display: none;
     }
 
     .prlayout
 {
-	display: block;
+    display: block;
 }
 
 .prcontent
 {
-	padding-top: 10px;
+    padding-top: 10px;
 }
 
 .prcontent
 {
-	padding-bottom: 5px;
+    padding-bottom: 5px;
 }
 
 .prcontent p
 {
-	text-align: center;
+    text-align: center;
 }
 
 }
@@ -736,27 +771,27 @@ footer p
 @media (min-width: 50.01em) and (max-width: 65em)
 {
 
-	nav
+    nav
 {
-	padding-top: 2em;
+    padding-top: 2em;
 }
-	.navbar
+    .navbar
  {
     gap: 2em;
  }
 
-	.Education
-	{
-		display: block;
-	}
+    .Education
+    {
+        display: block;
+    }
 
-		.eiconf
-	{
-		display: flex;
-		justify-content: center;
-	}
+        .eiconf
+    {
+        display: flex;
+        justify-content: center;
+    }
 
-	.sgrid 
+    .sgrid 
   {
     grid-template-columns: 1fr 1fr;
   }
@@ -768,7 +803,7 @@ footer p
 
   footer p
 {
-	font-size: 1em;
+    font-size: 1em;
 }
 }
 
@@ -778,40 +813,40 @@ footer p
 @media (min-width: 65.01em)
 {
 
-	.intro
-	{
-		width: 60%;
-		padding-bottom: 6vw;
-	}
+    .intro
+    {
+        width: 60%;
+        padding-bottom: 6vw;
+    }
 
-	.navbar
-	{
-	gap: 4em;
-	}
+    .navbar
+    {
+    gap: 4em;
+    }
 
-	.sgrid 
+    .sgrid 
   {
     grid-template-columns: 2fr 1fr 1fr;
   }
 
  .navbar li
  {
- 	white-space: nowrap;
+    white-space: nowrap;
  }
 
  p
  {
- 	font-size: 1.25em;
+    font-size: 1.25em;
  }
 
  li
  {
- 	font-size: 1.12em;
+    font-size: 1.12em;
  }
 
  span
  {
- 	 	font-size: 1.12em;
+        font-size: 1.12em;
  }
 
 }
@@ -859,6 +894,3 @@ footer p
   z-index: 0;
   pointer-events: none;
 }
-
-
-
