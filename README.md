@@ -6,7 +6,7 @@ The website serves as a central platform where recruiters, employers, and collab
 
 ## Live Website
 
-[Visit the Portfolio Website](YOUR-WEBSITE-URL)
+[Visit the Portfolio Website](https://frawerygg.github.io/FreyGG-s-Online-Resume/)
 
 ## Technologies Used
 
